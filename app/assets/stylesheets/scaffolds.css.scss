@@ -1,0 +1,109 @@
+.slider-wrapper {
+  height: 350px;
+  width: 100%;
+  background: transparent url(/assets/slider.jpg) repeat 0% 0%;
+  border-bottom: 5px solid #f6f6f6 !important;
+  -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,.25);
+  -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,.25);
+  box-shadow: inset 0px 0px 5px rgba(0,0,0,.25);
+  -webkit-transition: background-position 1.4s ease-in-out 0.3s;
+  -moz-transition: background-position 1.4s ease-in-out 0.3s;
+  -o-transition: background-position 1.4s ease-in-out 0.3s;
+  -ms-transition: background-position 1.4s ease-in-out 0.3s;
+  transition: background-position 1.4s ease-in-out 0.3s;
+}
+.slider-wrapper h1 {
+  font-family: 'Boogaloo', 'Arial Narrow', Arial, sans-serif;
+  font-size: 60px;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.slider-wrapper h2 {
+  margin-top: 20px;
+  color: #ffffff;
+}
+.slider-wrapper p {
+  color: #ffffff;
+}
+.show-grid [class*="span"] {
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+.wysihtml5 {
+  width: 90%;
+}
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #E5E5E5;
+  background-color: #5e5e5e;
+  color: whiteSmoke;
+}
+a.facebook-connect {
+  background-image: url('/assets/social.png');
+  background-position: -262px 0;
+  display: block;
+  width: 186px;
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-family: Verdana;
+  line-height: 50px;
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 10px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+a.google-connect {
+  background-image: url('/assets/social.png');
+  background-position: -524px 0;
+  display: block;
+  width: 186px;
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-family: Verdana;
+  line-height: 50px;
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 10px;
+  float: left;
+}

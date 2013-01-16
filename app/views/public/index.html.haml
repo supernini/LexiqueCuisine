@@ -1,0 +1,20 @@
+.row-fluid.show-grid
+  .span12
+    %h1
+      Lexique Culinaire
+    %p
+      Retrouver toute les définitions culinaire
+    - if @lexique
+      = simple_form_for @lexique, :html => { :class => 'form-search' }, :method => :post, :url => search_path do |f|
+        .input-append
+          = f.text_field :name, :class => 'search-query input-xlarge', :value => '', :placeholder => (@lexique ? @lexique.name : '')
+          %button.btn{:type => "submit"} Rechercher
+- if @lexique
+  .row-fluid.show-grid
+    .span12
+      %h2
+        Définition du jour :
+        %strong
+          = @lexique.name
+      %p
+        = @lexique.short_description

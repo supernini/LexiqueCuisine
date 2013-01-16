@@ -1,0 +1,11 @@
+.page-header
+  %h1
+    Lexique de A à Z
+- @lexiques.keys.sort.each do |starting_letter|
+  %h2
+    = starting_letter.upcase if starting_letter
+  .row-fluid
+    - @lexiques[starting_letter].each do |lexique|
+      .span2
+        %h4
+          = link_to lexique.name, lexique_permalink_path(:permalink => lexique.permalink)

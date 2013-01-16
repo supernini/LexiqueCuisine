@@ -1,0 +1,20 @@
+= simple_form_for @lexique, :html => { :class => 'form-horizontal' } do |f|
+  - @lexique.published_at = @lexique.published_at.strftime('%F') if @lexique.published_at
+  = f.association :category
+  = f.input :first_letter, :input_html => {:class => 'input-large'}
+  = f.input :title, :input_html => {:class => 'input-xxlarge'}
+  = f.input :name, :input_html => {:class => 'input-xxlarge'}
+  = f.input :permalink, :input_html => {:class => 'input-xxlarge'}
+  = f.input :short_description, :input_html =>  { :class => 'input-xxlarge', :rows => 9 }
+  = f.input :meta_description, :input_html => {:class => 'input-xxlarge'}
+  = f.input :description, :input_html =>  { :class => 'input-xxlarge wysihtml5', :rows => 9 }
+  = f.input :keywords, :input_html => {:class => 'input-xxlarge', :rows => 9}
+  = f.input :published_at, :input_html => {:class => 'datepicker', :'data-behaviour' => 'datepicker'}, :as => :string
+  = f.input :family, :input_html => {:class => 'input-xxlarge', :rows => 9}
+  = f.input :synonyme, :input_html => {:class => 'input-xxlarge', :rows => 9}
+
+  = f.input :courant
+  = f.input :image, :label => "Image"
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), lexiques_path, :class => 'btn'

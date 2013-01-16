@@ -1,0 +1,40 @@
+- content_for :description, @lexique.meta_description
+- content_for :title, @lexique.title
+- content_for :sidebar do
+  .span3
+    .well.sidebar-nav
+      %div
+        = render :partial => 'layouts/google300'
+      %div
+        = render :partial => 'layouts/google300'
+
+- model_class = Lexique
+
+.page-header
+  %h1
+    =@lexique.name
+  - if @lexique.category
+    %p
+      %strong= model_class.human_attribute_name(:category_id) + ':'
+      = link_to @lexique.category.name, category_permalink_path(:permalink => @lexique.category.permalink)
+%p
+  = render :partial => 'layouts/googletheme'
+%p
+  = raw @lexique.description
+  = image_tag @lexique.image.url(:medium), :style => 'float:right' if @lexique.image?
+.clearfix
+.row-fluid
+  - if @lexique.family
+    .span6
+      %p
+        %strong
+          Autre(s) mot(s) de la même famille
+        %br
+        = @lexique.family
+  - if @lexique.synonyme
+    .span6
+      %p
+        %strong
+          Synonyme
+        %br
+        = @lexique.synonyme
